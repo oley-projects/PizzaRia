@@ -9,10 +9,12 @@
 	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 
 		<p><%= p.title %></p>
-		<img style="width: 100%" src="<%= p.path_to_image %>" />
+		<img style="height: 100%; max-width: 100%" src="<%= p.path_to_image %>" />
 		<p>Description: <%= p.description %></p>
 		<p>Size: <%= p.size %> Cm</p>
 		<p>Price: <%= p.price %> Uah</p>
+		
+		<button type="button" class="btn btn-warning btn-sm" onclick="add_to_cart(<%=p.id%>)">Add to card</button>
 
 	</div>
 
