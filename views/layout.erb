@@ -38,7 +38,11 @@
 			      <li><a href="/contacts">Contacts</a></li>
 			    </ul>
 			    <ul class="navbar-right">
-			      <input type="submit" class="btn-danger btn-lg" value="Cart ..." />
+			      
+			      <form action="/cart" method="post">
+			      	<input name="orders" type="text" />
+			     	<input type="submit" class="btn-danger btn-lg" value="Cart ..." />
+			      </form>
 			    </ul>
 			  </div><!--/.nav-collapse -->
 			</nav>
