@@ -25,5 +25,5 @@ get '/contacts' do
 	erb :contacts
 end	
 get '/cart' do
-	erb "Cart page"
+	erb :cart
 end	
