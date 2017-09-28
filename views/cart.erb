@@ -1,12 +1,14 @@
 <script src="/script.js"></script>
 <script type="text/javascript">
+	var orders_arr = cart_get_orders();
 	$(function() {
 		update_orders_input();
 		update_orders_button();
 	});
+	window.onload = $(function() {
+        document.getElementById('orders_input_table').innerHTML = orders_arr;
+    });
 </script>
 
-<form action="/cart" method="post">
-<input name="orders" type="text" id="orders_input" />
-
-</form>
+<p id="orders_input_table">
+</p>
