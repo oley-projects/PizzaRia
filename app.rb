@@ -31,8 +31,8 @@ get '/cart' do
 end	
 
 post '/cart' do	
-	orders_input = params[:orders]
-	@items = parse_orders_input orders_input
+	@orders_input = params[:orders]
+	@items = parse_orders_input @orders_input
 
 	@items.each do |item|
 		# id, count
