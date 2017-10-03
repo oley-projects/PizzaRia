@@ -9,6 +9,9 @@ set :database, "sqlite3:pizzaria.db"
 class Product < ActiveRecord::Base
 end
 
+class Order < ActiveRecord::Base
+end
+
 get '/' do
 	@products = Product.all
 	erb :index
@@ -40,6 +43,15 @@ post '/cart' do
 	end
 
 	erb :cart
+end	
+
+get '/place_order' do
+	erb "test"
+end	
+
+post '/place_order' do
+	@o = Order.new params[:order]
+	redirect to('/cart')
 end	
 
 def parse_orders_input orders_input
