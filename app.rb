@@ -30,7 +30,7 @@ get '/contacts' do
 end	
 
 get '/cart' do
-	erb :cart
+	erb "cart"
 end	
 
 post '/cart' do	
@@ -50,8 +50,8 @@ get '/place_order' do
 end	
 
 post '/place_order' do
-	@o = Order.new params[:order]
-	redirect to('/cart')
+	@order = Order.create params[:order]
+	erb :order_placed
 end	
 
 def parse_orders_input orders_input
