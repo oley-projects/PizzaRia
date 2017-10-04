@@ -50,7 +50,7 @@ get '/place_order' do
 end	
 
 post '/place_order' do
-	@order = Order.create params[:order]
+	@order = Order.create params[:order_input]
 	erb :order_placed
 end	
 
